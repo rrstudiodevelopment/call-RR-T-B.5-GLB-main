@@ -9,7 +9,7 @@ import base64
 from io import BytesIO
 
 # === URL PRIVATE REPO (BASE64) ===
-ENCODED_URL = "aHR0cHM6Ly9naXRodWIuY29tL3Jyc3R1ZGlvZGV2ZWxvcG1lbnQvUlItVC1CLjRfVjA4L2FyY2hpdmUvcmVmcy9oZWFkcy9tYWluLnppcA=="
+ENCODED_URL = "aHR0cHM6Ly9naXRodWIuY29tL3Jyc3R1ZGlvZGV2ZWxvcG1lbnQvUlItVC1CLjVfVjAxLUdMQi0tbWFpbi9hcmNoaXZlL3JlZnMvaGVhZHMvbWFpbi56aXA="
 ZIP_URL = base64.b64decode(ENCODED_URL).decode("utf-8")
 
 TEMP_FOLDER = bpy.app.tempdir
@@ -207,11 +207,11 @@ def main():
         return
 
     major, minor = bpy.app.version[:2]
-    if major == 4:
+    if major == 5:
         install_raha_tools()
     else:
         show_message_box(
-            f"Blender {major}.{minor} tidak didukung. Gunakan Blender 4.x.",
+            f"Blender {major}.{minor} tidak didukung. Gunakan Blender 5.x.",
             "Versi Tidak Didukung", 'ERROR'
         )
 
